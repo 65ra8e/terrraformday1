@@ -65,7 +65,7 @@ resource "google_compute_instance" "myinstance3" {
   }
 
   network_interface {
-    network    = google_compute_network.main.id
+    network    = google_compute_network.main2.id
     subnetwork = google_compute_subnetwork.iowa.id
     access_config {
 
@@ -91,7 +91,7 @@ resource "google_compute_instance" "myinstance4" {
   }
 
   network_interface {
-    network    = google_compute_network.main.id
+    network    = google_compute_network.main2.id
     subnetwork = google_compute_subnetwork.southamerica.id
     access_config {
 

@@ -43,14 +43,38 @@ variable "ip_cidr_range2" {
 
 variable "ip_cidr_range3" {
   type = string
-  default = "10.206.117.0/24"
+  default = "10.30.77.0/24"
   
 }
 
 variable "ip_cidr_range4"{
   type = string
-  default = "10.206.137.0/24"
+  default = "10.30.97.0/24"
   
 }
 
+variable "google_compute_subnetwork" {
+  type = string
+  default = "imfromseattle"
+  
+}
+
+  
+variable "google_compute_subnetwork2" {
+  type = string
+  default = "tokyo"
+  
+}
+
+variable "google_compute_subnetwork3" {
+  type = string
+  default = "iowa"
+}
+
+variable "google_compute_subnetwork4" {
+  type = string
+  default = "southamerica"
+}
  
+
+  
