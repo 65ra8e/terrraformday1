@@ -1,80 +1,64 @@
 variable "project" {
-  type = string
-    default = "seahawks25"
+  type                            = string
+  default                         = "seahawks25"
 }
  
 
-variable "region" {
-  type = string
-  default = "us-west1"
+variable "region1" {
+  type                            = string
+  default                         = "us-west1"
   
 }
-
-
+ 
 variable "region2" {
-  type = string
-  default = "asia-east1"
+  type                            = string
+  default                         = "asia-east1"
   
 }
 
 variable "region3" {
-  type = string
-  default = "us-central1"
+  type                            = string
+  default                         = "us-central1"
   
 }
 
 variable "region4" {
-  type = string
-  default = "southamerica-east1"
+  type                            = string
+  default                         = "southamerica-east1"
   
 }
 
-variable "ip_cidr_range" {
-  type = string
-  default = "10.206.77.0/24"
-  
-}
+variable "subnetwork" {
+   type                           = map(map(string))
+   default                        = {
+     imfromseattle                = {
+       name                       = "imfromseattle"
+       ip_cidr_range              = "10.206.77.0/24"
+       region                     = "us-west1"
+       
+   }
 
-variable "ip_cidr_range2" {
-  type = string
-  default = "10.206.97.0/24"
-  
-}
+    tokyo                         = {
+        name                      = "tokyo"
+        ip_cidr_range             = "10.206.97.0/24"
+        region                    = "asia-east1"
+        
+    }
 
-variable "ip_cidr_range3" {
-  type = string
-  default = "10.30.77.0/24"
-  
-}
+    iowa                          = {
+        name                      = "iowa"
+        ip_cidr_range             = "10.30.77.0/24"
+        region                    = "us-central1"
+        
+    }
 
-variable "ip_cidr_range4"{
-  type = string
-  default = "10.30.97.0/24"
-  
-}
-
-variable "google_compute_subnetwork" {
-  type = string
-  default = "imfromseattle"
-  
-}
-
-  
-variable "google_compute_subnetwork2" {
-  type = string
-  default = "tokyo"
-  
-}
-
-variable "google_compute_subnetwork3" {
-  type = string
-  default = "iowa"
-}
-
-variable "google_compute_subnetwork4" {
-  type = string
-  default = "southamerica"
-}
- 
+    southamerica                  = {
+        name                      = "southamerica"
+        ip_cidr_range             = "10.30.97.0/24"
+        region                    = "southamerica-east1"
+        
+    }
+   }
+  }
 
   
